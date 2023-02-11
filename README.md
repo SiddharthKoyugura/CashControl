@@ -1,4 +1,4 @@
-# Expenses-Tracker
+# EXPENSES_TRACKER
 A flutter application which lets you to track your expenditures and helps to analyse visually through charts!
 
 ## Run in terminal:
