@@ -12,8 +12,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: 'Expenses_Tracker',
+    return MaterialApp(
+      title: 'CashControl',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.purple)
+            .copyWith(secondary: Colors.amber),
+      ),
       home: MyHomePage(),
     );
   }
@@ -71,8 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Expenses_Tracker'),
-        backgroundColor: Colors.purple,
+        title: const Text('CashControl'),
         actions: <Widget>[
           IconButton(
             icon: const Icon(Icons.add),
