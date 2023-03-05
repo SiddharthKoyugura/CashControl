@@ -13,10 +13,23 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'CashControl',
+      title: 'Cash Control',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.purple)
             .copyWith(secondary: Colors.amber),
+        fontFamily: 'Quicksand',
+        textTheme: ThemeData.light().textTheme.copyWith(
+            titleLarge: const TextStyle(
+                fontFamily: 'OpenSans',
+                fontSize: 18,
+                fontWeight: FontWeight.bold)),
+        appBarTheme: const AppBarTheme(
+          titleTextStyle: TextStyle(
+            fontFamily: 'OpenSans',
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
       ),
       home: MyHomePage(),
     );
@@ -75,7 +88,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('CashControl'),
+        title: const Text('Cash Control'),
         actions: <Widget>[
           IconButton(
             icon: const Icon(Icons.add),
